@@ -1,0 +1,24 @@
+{
+  "name": "showtimeoasis",
+  "version": "1.0.0",
+  "description": "Showtime Oasis",
+  "main": "index.js",
+  "homepage": "https://eclap5.github.io/ShowtimeOasis",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eclap5/ShowtimeOasis"
+  },
+  "author": "Aleksi Haapalainen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eclap5/ShowtimeOasis/issues"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "node-sass": "^8.0.0"
+  }
+}
