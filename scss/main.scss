@@ -37,18 +37,20 @@ h3 {
   border: 0;
   border-radius: 25px;
   margin-bottom: 0.3rem;
-  
+
   &:hover {
     background: $secondary-color;
-    color: set-text-color($secondary-color);
+    color: #333;
   }
 }
 
+// Container includes middle items: Introduction text and recommended series.
 .container {
   display: table;
   table-layout: fixed;
   margin-top: 3rem;
 
+  // Introduction text
   .sm-heading {
     width: 50%;
     border-radius: 25px;
@@ -59,6 +61,7 @@ h3 {
     vertical-align: middle;
   }
 
+  // Recommended series
   .recommendation {
     display: table-cell;
     vertical-align: middle;
@@ -84,7 +87,7 @@ h3 {
 
     .btn-light {
       @extend .btn;
-      background: lighten(#444, 50);
+      background: lighten(#333, 50);
       color: #333;
     }
   }
@@ -103,14 +106,6 @@ header {
 
 main {
   padding: 4rem;
-  //min-height: calc(100vh - 60px);
-
-  // &#home {
-  //   overflow: hidden;
-  //   h1 {
-  //     margin-top: 20vh;
-  //   }
-  // }
 }
 
 // Links to stream services
@@ -195,19 +190,6 @@ main {
       border-color: $secondary-color;
       @include easeOut();
     }
-  }
-}
-
-// Button Styles
-.btn {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem;
-  
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
   }
 }
 
