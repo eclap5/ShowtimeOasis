@@ -104,6 +104,21 @@ body {
       background: rgba(0, 0, 0, 0.6);
       z-index: -1; }
 
+html {
+  scroll-behavior: smooth; }
+
+header {
+  width: 100%;
+  background-color: #060606;
+  position: fixed;
+  z-index: 2; }
+
+.text-secondary {
+  color: #7DF9FF; }
+
+main {
+  padding: 4rem; }
+
 h1,
 h2,
 h3 {
@@ -116,14 +131,14 @@ h3 {
     top: 0%;
     font-size: 4rem; }
 
-.btn, .container .recommendation .btn-dark, .container .recommendation .btn-light, .btn-dark, .btn-light {
+.btn, .container .recommendation .btn-dark, .container .recommendation .btn-light, .trending .btn-dark, .trending .btn-light, .classics .btn-dark, .classics .btn-light {
   width: 300px;
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   border-radius: 25px;
   margin-bottom: 0.3rem; }
-  .btn:hover, .container .recommendation .btn-dark:hover, .container .recommendation .btn-light:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .container .recommendation .btn-dark:hover, .container .recommendation .btn-light:hover, .trending .btn-dark:hover, .trending .btn-light:hover, .classics .btn-dark:hover, .classics .btn-light:hover {
     background: #7DF9FF;
     color: #333; }
 
@@ -143,6 +158,9 @@ h3 {
     display: table-cell;
     vertical-align: middle;
     padding-left: 20rem; }
+    .container .recommendation a {
+      font-size: 1rem;
+      height: 2.5rem; }
     .container .recommendation .recommendation-title {
       color: #fff;
       margin: 1rem;
@@ -157,18 +175,6 @@ h3 {
     .container .recommendation .btn-light {
       background: #b3b3b3;
       color: #333; }
-
-header {
-  width: 100%;
-  background-color: #060606;
-  position: fixed;
-  z-index: 2; }
-
-.text-secondary {
-  color: #7DF9FF; }
-
-main {
-  padding: 4rem; }
 
 .icons {
   display: flex;
@@ -190,55 +196,69 @@ main {
       padding: 0.5rem 1.5rem;
       background: #fff; }
 
-.about-info {
+.trending-header {
+  color: #C41E3A;
+  margin-top: 3rem;
+  font-size: 2rem; }
+
+.trending {
+  background: rgba(44, 44, 44, 0.6);
+  border-radius: 25px;
+  padding: 1rem;
+  margin-top: 2rem;
+  justify-items: center;
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(2, 1fr); }
-  .about-info .bio-image {
-    grid-area: bioimage;
+  grid-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'img img img'; }
+  .trending .img {
+    width: 300px;
+    border: #fff solid 3px;
+    border-radius: 25px;
+    grid-area: img;
     margin: auto;
-    border-radius: 50%;
-    border: #7DF9FF 3px solid; }
-  .about-info .bio {
-    grid-area: bio;
-    font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job {
-    background: rgba(13, 13, 13, 0);
-    padding: 0.5rem;
-    border-bottom: #7DF9FF 5px solid; }
+    object-fit: cover; }
+  .trending .btn-dark {
+    background: black;
+    color: #fff; }
+  .trending .btn-light {
+    background: #b3b3b3;
+    color: #333; }
 
-.projects {
+.classics-header {
+  color: #C41E3A;
+  margin-top: 3rem;
+  font-size: 2rem; }
+
+.classics {
+  background: rgba(44, 44, 44, 0.6);
+  border-radius: 25px;
+  padding: 1rem;
+  margin-top: 2rem;
+  justify-items: center;
   display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #7DF9FF;
-      transition: all 0.5s ease-out; }
-
-.btn-dark {
-  background: rgba(0, 0, 0, 0);
-  color: #fff; }
-
-.btn-light {
-  background: rgba(128, 128, 128, 0);
-  color: #333; }
+  grid-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'img img img'; }
+  .classics .img {
+    width: 300px;
+    border: #fff solid 3px;
+    border-radius: 25px;
+    grid-area: img;
+    margin: auto;
+    object-fit: cover; }
+  .classics .btn-dark {
+    background: black;
+    color: #fff; }
+  .classics .btn-light {
+    background: #b3b3b3;
+    color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #262626;
-  color: #000;
+  color: #C41E3A;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
