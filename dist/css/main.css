@@ -242,6 +242,7 @@ h3 {
   grid-template-areas: 'img img img'; }
   .classics .img {
     width: 300px;
+    height: 450px;
     border: #fff solid 3px;
     border-radius: 25px;
     grid-area: img;
