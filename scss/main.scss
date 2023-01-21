@@ -23,7 +23,7 @@ header {
   width: 100%;
   background-color: lighten(rgb(0, 0, 0), 2.5);
   position: fixed;
-  z-index: 2;
+  z-index: 3;
 }
 
 .text-secondary {
@@ -145,7 +145,6 @@ h3 {
   }
 }
 
-
 // Series page first header
 .trending-header {
   color: $third-color;
@@ -153,38 +152,86 @@ h3 {
   font-size: 2rem;
 }
 
-// Trending series grid
-.trending {
-  background: rgba(rgb(44, 44, 44), $background-opacity);
+.trending-section {
+  padding-top: 3%;
+  color: #fff;
+}
+
+.trending-title {
+  font-size: 26px;
+  line-height: 14px;
+  font-weight: 500;
+  margin: 2% 4% 12px;
+}
+
+.trending.swiper-container {
+  padding: 1% 4%;
+}
+
+.img {
+  width: 400px;
+  height: 600px;
+  border: #fff solid 3px;
   border-radius: 25px;
-  padding: 1rem;
-  margin-top: 2rem;
-  justify-items: center;
-  display: grid;
-  grid-gap: 15px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-  'img img img';
+}
 
-  .img {
-    width: 300px;
-    border: #fff solid 3px;
-    border-radius: 25px;
-    grid-area: img;
-    margin: auto;
-    object-fit: cover;
-  }
-  
-  .btn-dark {
-    @extend .btn;
-    background: darken(#444, 50);
-    color: #fff;
+.btn-dark {
+  @extend .btn;
+  width: 400px;
+  background: #444;
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  width: 400px;
+  background: lighten(#333, 50);
+  color: #333;
+}
+
+.trending .swiper-button-prev,
+.trending .swiper-button-next {
+  height: 100%;
+  width: 4%;
+  width: calc(4% - 5px);
+  top: 8%;
+  bottom: 0;
+  margin: 0;
+}
+
+.trending .swiper-button-prev {
+  left: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.trending .swiper-button-next {
+  right: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.trending .swiper-button-prev::after,
+.trending .swiper-button-next::after {
+  color: #fff;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 640px) {
+  .trending .swiper-button-prev::after,
+  .trending .swiper-button-next::after {
+      font-size: 2.4vw;
   }
 
-  .btn-light {
-    @extend .btn;
-    background: lighten(#333, 50);
-    color: #333;
+  .trending .swiper-button-prev:hover::after,
+  .trending .swiper-button-next:hover::after {
+      transform: scale(1.25);
+  }
+
+  .trending:hover .swiper-button-prev::after,
+  .trending:hover .swiper-button-next::after {
+      display: block;
   }
 }
 

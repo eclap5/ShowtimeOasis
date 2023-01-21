@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Welcome To Showtime Oasis</title>
 </head>
 
@@ -45,37 +47,76 @@
     </header>
 
     <main id="series">
-        <h3 class="trending-header">Trending Series Right Now</h3>
-        <div class="trending">
-            <div class="item">
-                <img class="img" src="https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_.jpg">
-                <a href="https://www.imdb.com/title/tt3581920/" class="btn-light">
-                    IMDB
-                </a>
-                <a href="https://play.hbomax.com/page/urn:hbo:page:GYyofRQHeuJ6fiQEAAAEy:type:series" class="btn-dark">
-                    Where to watch?
-                </a>
+        <section class="trending-section">
+            <h3 class="trending-title">Trending Series Right Now</h3>
+            <div class="trending swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img class="img" src="https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_.jpg">
+                        <a href="https://www.imdb.com/title/tt3581920/" class="btn-light">
+                            IMDB
+                        </a>
+                        <a href="https://play.hbomax.com/page/urn:hbo:page:GYyofRQHeuJ6fiQEAAAEy:type:series" class="btn-dark">
+                            Where to watch?
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img" src="https://m.media-amazon.com/images/M/MV5BM2QyZmE2ZjMtZDI4Yi00Y2ZiLWI1ZDgtOTQwMDRkYTg0YmY4XkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg">
+                        <a href="https://www.imdb.com/title/tt11198330/?ref_=nv_sr_srsg_0" class="btn-light">
+                            IMDB
+                        </a>
+                        <a href="https://play.hbomax.com/page/urn:hbo:page:GYsYeoAxKH8LCwgEAAAOR:type:series" class="btn-dark">
+                            Where to watch?
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img" src="https://m.media-amazon.com/images/M/MV5BMGFlMzI0YmEtZDEzNy00NWY1LTgzNDEtMTg2MzQ4OWFlNmNjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg">
+                        <a href="https://www.imdb.com/title/tt7631058/" class="btn-light">
+                            IMDB
+                        </a>
+                        <a href="https://www.primevideo.com/detail/0TUVXIO58IUNEPNBF8363Z7YGL/ref=atv_hm_hom_c_FOkJeu_brws_7_4" class="btn-dark">
+                            Where to watch?
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img" src="https://m.media-amazon.com/images/M/MV5BNWFjOTY5MjEtNDMxZi00MzcwLTllNzQtYWU1ZGQzZjZmMGI1XkEyXkFqcGdeQXVyMTU5OTc2NTk@._V1_.jpg">
+                        <a href="https://www.imdb.com/title/tt8466564/?ref_=ttmi_tt" class="btn-light">
+                            IMDB
+                        </a>
+                        <a href="https://www.disneyplus.com/en-gb/series/obi-wan-kenobi/2JYKcHv9fRJb" class="btn-dark">
+                            Where to watch?
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img" src="https://m.media-amazon.com/images/M/MV5BMWQxNjBlMjItNjRhOC00MGYzLTk1MWItZTdhZjM1ZjRiMzY4XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg">
+                        <a href="https://www.imdb.com/title/tt11311302/?ref_=ttmi_tt" class="btn-light">
+                            IMDB
+                        </a>
+                        <a href="https://www.netflix.com/browse/genre/83?jbv=81149450" class="btn-dark">
+                            Where to watch?
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img" src="https://m.media-amazon.com/images/M/MV5BN2VlNTA5OTEtYThhZi00NDUyLWJhODgtMjE0MzJkZGFmZjE1XkEyXkFqcGdeQXVyMTI5NTQ5MDE5._V1_.jpg">
+                        <a href="https://www.imdb.com/title/tt15438246/?ref_=ttmi_tt" class="btn-light">
+                            IMDB
+                        </a>
+                        <a href="https://www.netflix.com/browse/genre/83?jbv=80992058" class="btn-dark">
+                            Where to watch?
+                        </a>
+                    </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div class="item">
-                <img class="img" src="https://m.media-amazon.com/images/M/MV5BM2QyZmE2ZjMtZDI4Yi00Y2ZiLWI1ZDgtOTQwMDRkYTg0YmY4XkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg">
-                <a href="https://www.imdb.com/title/tt11198330/?ref_=nv_sr_srsg_0" class="btn-light">
-                    IMDB
-                </a>
-                <a href="https://play.hbomax.com/page/urn:hbo:page:GYsYeoAxKH8LCwgEAAAOR:type:series" class="btn-dark">
-                    Where to watch?
-                </a>
-            </div>
-            <div class="item">
-                <img class="img" src="https://m.media-amazon.com/images/M/MV5BMGFlMzI0YmEtZDEzNy00NWY1LTgzNDEtMTg2MzQ4OWFlNmNjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg">
-                <a href="https://www.imdb.com/title/tt7631058/" class="btn-light">
-                    IMDB
-                </a>
-                <a href="https://www.primevideo.com/detail/0TUVXIO58IUNEPNBF8363Z7YGL/ref=atv_hm_hom_c_FOkJeu_brws_7_4" class="btn-dark">
-                    Where to watch?
-                </a>
-            </div>
-        </div>
-            <h3 class="classics-header">Timeless Classics</h3>
+        </section>
+
+            
+
+        <!-- <h3 class="classics-header">Timeless Classics</h3>
         <div class="classics">
             <div class="item">
                 <img class="img" src="https://m.media-amazon.com/images/M/MV5BZjRiOTAyNTAtZTQwZC00MjZkLTkwMGMtOWFlMjk2NjNmY2JjXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg">
@@ -131,8 +172,33 @@
                     Where to watch?
                 </a>
             </div>
-        </div>
+        </div> -->
     </main>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            spaceBetween: 5,
+            slidesPerView: 2,
+            loop: true,
+            freeMode: true,
+            loopAdditionalSlides: 5,
+            speed: 500,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    freeMode: false
+                }
+            }
+        })
+    </script>
 
     <footer id="main-footer">
         Copyright &copy; 2023
