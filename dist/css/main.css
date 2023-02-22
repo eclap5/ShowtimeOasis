@@ -131,14 +131,14 @@ h3 {
     top: 0%;
     font-size: 4rem; }
 
-.btn, .container .recommendation .btn-dark, .container .recommendation .btn-light, .btn-dark, .btn-light, .classics .btn-dark, .classics .btn-light {
+.btn, .container .recommendation .btn-dark, .container .recommendation .btn-light, .trending-section .btn-dark, .trending-section .btn-light, .series-grid .btn-dark, .series-grid .btn-light {
   width: 300px;
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   border-radius: 25px;
   margin-bottom: 0.3rem; }
-  .btn:hover, .container .recommendation .btn-dark:hover, .container .recommendation .btn-light:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .container .recommendation .btn-dark:hover, .container .recommendation .btn-light:hover, .trending-section .btn-dark:hover, .trending-section .btn-light:hover, .series-grid .btn-dark:hover, .series-grid .btn-light:hover {
     background: #7DF9FF;
     color: #333; }
 
@@ -156,7 +156,6 @@ h3 {
     vertical-align: middle; }
   .container .recommendation {
     display: table-cell;
-    vertical-align: middle;
     padding-left: 20rem; }
     .container .recommendation a {
       font-size: 1rem;
@@ -196,82 +195,48 @@ h3 {
       padding: 0.5rem 1.5rem;
       background: #fff; }
 
-.trending-header {
-  color: #C41E3A;
-  margin-top: 3rem;
-  font-size: 2rem; }
-
 .trending-section {
   padding-top: 3%;
-  color: #fff; }
-
-.trending-title {
-  font-size: 26px;
-  line-height: 14px;
-  font-weight: 500;
-  margin: 2% 4% 12px; }
-
-.trending.swiper-container {
-  padding: 1% 4%; }
-
-.img {
-  width: 400px;
-  height: 600px;
-  border: #fff solid 3px;
-  border-radius: 25px; }
-
-.btn-dark {
-  width: 400px;
-  background: #444;
-  color: #fff; }
-
-.btn-light {
-  width: 400px;
-  background: #b3b3b3;
-  color: #333; }
-
-.trending .swiper-button-prev,
-.trending .swiper-button-next {
-  height: 100%;
-  width: 4%;
-  width: calc(4% - 5px);
-  top: 8%;
-  bottom: 0;
-  margin: 0; }
-
-.trending .swiper-button-prev {
-  left: 0;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px; }
-
-.trending .swiper-button-next {
-  right: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px; }
-
-.trending .swiper-button-prev::after,
-.trending .swiper-button-next::after {
   color: #fff;
-  font-size: 4vw;
-  font-weight: bold; }
+  position: relative; }
+  .trending-section .trending-title {
+    font-size: 26px;
+    line-height: 14px;
+    font-weight: 500;
+    margin: 2% 4% 12px;
+    color: #fff; }
+  .trending-section .swiper-container {
+    padding: 1% 4%;
+    position: relative; }
+  .trending-section .img {
+    width: 300px;
+    height: 450px;
+    border: #fff solid 3px;
+    border-radius: 25px; }
+  .trending-section .btn-dark {
+    width: 300px;
+    background: #444;
+    color: #fff; }
+  .trending-section .btn-light {
+    width: 300px;
+    background: #b3b3b3;
+    color: #333; }
+  .trending-section .swiper-button-next {
+    color: #fff; }
+  .trending-section .swiper-button-prev {
+    color: #fff; }
+  @media screen and (min-width: 640px) {
+    .trending-section .swiper-button-prev::after,
+    .trending-section .swiper-button-next::after {
+      font-size: 2.4vw; }
+    .trending-section .swiper-button-prev:hover::after,
+    .trending-section .swiper-button-next:hover::after {
+      transform: scale(1.25); }
+    .trending-section :hover .swiper-button-prev::after,
+    .trending-section :hover .swiper-button-next::after {
+      display: block; } }
 
-@media screen and (min-width: 640px) {
-  .trending .swiper-button-prev::after,
-  .trending .swiper-button-next::after {
-    font-size: 2.4vw; }
-  .trending .swiper-button-prev:hover::after,
-  .trending .swiper-button-next:hover::after {
-    transform: scale(1.25); }
-  .trending:hover .swiper-button-prev::after,
-  .trending:hover .swiper-button-next::after {
-    display: block; } }
-
-.classics-header {
-  color: #C41E3A;
-  margin-top: 3rem;
-  font-size: 2rem; }
-
-.classics {
+.series-grid {
   background: rgba(44, 44, 44, 0.6);
   border-radius: 25px;
   padding: 1rem;
@@ -281,18 +246,18 @@ h3 {
   grid-gap: 15px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 'img img img'; }
-  .classics .img {
+  .series-grid .img {
     width: 300px;
     height: 450px;
     border: #fff solid 3px;
     border-radius: 25px;
-    grid-area: img;
+    grid-area: 'img';
     margin: auto;
     object-fit: cover; }
-  .classics .btn-dark {
+  .series-grid .btn-dark {
     background: black;
     color: #fff; }
-  .classics .btn-light {
+  .series-grid .btn-light {
     background: #b3b3b3;
     color: #333; }
 
@@ -302,10 +267,6 @@ h3 {
   background: #262626;
   color: #C41E3A;
   height: 60px; }
-
-@media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .container {
@@ -324,9 +285,9 @@ h3 {
         padding: 0;
         width: 180px;
         margin-right: 5rem; }
-      .container .recommendation .btn-dark, .container .recommendation .btn-light {
-        width: 60%;
-        margin-left: 2.5rem; } }
+      .container .recommendation .btn, .container .recommendation .btn-dark, .container .recommendation .btn-light {
+        width: 180px;
+        margin-right: 5rem; } }
 
 @media screen and (max-width: 768px) {
   .container {
@@ -345,9 +306,10 @@ h3 {
         padding: 0;
         width: 180px;
         margin-right: 5rem; }
-      .container .recommendation .btn-dark, .container .recommendation .btn-light {
-        width: 60%;
-        margin-left: 2.5rem; }
+      .container .recommendation .btn, .container .recommendation .btn-dark, .container .recommendation .btn-light {
+        display: block;
+        width: 180px;
+        margin-right: 5rem; }
   ul.menu-nav {
     float: none;
     width: 100%;
@@ -357,7 +319,29 @@ h3 {
   .menu-nav {
     height: 100vh;
     transform: translate3d(-100%, 0, 0);
-    font-size: 24px; } }
+    font-size: 24px; }
+  .trending-section {
+    padding-top: 12%;
+    color: #fff;
+    display: block; }
+    .trending-section .img {
+      width: 150px;
+      height: 225px;
+      border: #fff solid 3px;
+      border-radius: 25px; }
+    .trending-section .btn-dark {
+      width: 150px;
+      background: #444;
+      color: #fff; }
+    .trending-section .btn-light {
+      width: 150px;
+      background: #b3b3b3;
+      color: #333; }
+  .series-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'img'; }
+    .series-grid .btn, .series-grid .container .recommendation .btn-dark, .container .recommendation .series-grid .btn-dark, .series-grid .container .recommendation .btn-light, .container .recommendation .series-grid .btn-light, .series-grid .btn-dark, .series-grid .btn-light {
+      width: 300px; } }
 
 @media screen and (max-width: 500px) {
   header .lg-heading {
@@ -382,6 +366,28 @@ h3 {
         padding: 0;
         width: 180px;
         margin-right: 5rem; }
-      .container .recommendation .btn-dark, .container .recommendation .btn-light {
-        width: 60%;
-        margin-left: 2.5rem; } }
+      .container .recommendation .btn, .container .recommendation .btn-dark, .container .recommendation .btn-light {
+        width: 180px;
+        display: block;
+        margin-right: 5rem; }
+  .trending-section {
+    color: #fff;
+    display: block; }
+    .trending-section .img {
+      width: 150px;
+      height: 225px;
+      border: #fff solid 3px;
+      border-radius: 25px; }
+    .trending-section .btn-dark {
+      width: 150px;
+      background: #444;
+      color: #fff; }
+    .trending-section .btn-light {
+      width: 150px;
+      background: #b3b3b3;
+      color: #333; }
+  .series-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'img'; }
+    .series-grid .btn, .series-grid .container .recommendation .btn-dark, .container .recommendation .series-grid .btn-dark, .series-grid .container .recommendation .btn-light, .container .recommendation .series-grid .btn-light, .series-grid .btn-dark, .series-grid .btn-light {
+      width: 300px; } }
