@@ -25,3 +25,7 @@ The Showtime Oasis website has the following features:
 ## Contributing
 
 If you find any issues with the website or want to suggest new features or new series to be added on, please open an issue on the GitHub repository.
+
+## Author
+
+Created by Aleksi Haapalainen
